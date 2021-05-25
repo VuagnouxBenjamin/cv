@@ -9,7 +9,16 @@
 
     <!-- tailwinCSS -->
     <link href="dist/style.css" rel="stylesheet">
+    <!-- Jquery & validate.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
 </head>
+<style>
+    .error {
+        color: red;
+        font-size: 12px;
+    }
+</style>
 
 <body class="relative" style="background-color: #FCFCFC;">
 
@@ -355,27 +364,30 @@
             </div>
 
             <div class="flex justify-center">
-                <form action="#" class="">
+                <form action="index.html" class="" method="GET" id="contact-form">
                     <label for="email">Votre adresse e-mail :</label><br>
-                    <input class="w-80 h-8 border rounded-lg my-2 md:w-96" type="text" id="email" name="email"><br>
+                    <input class="w-80 h-8 border rounded-lg my-2 md:w-96" type="email" id="email" name="email"><br>
+                    <p class="text-sm" id="email-err"></p>
 
                     <label for="mail_object">Objet du mail :</label><br>
-                    <input class="w-80 h-8 border rounded-lg my-2 md:w-96" type="text" id="mail_object" name="mail_object">
+                    <input class="w-80 h-8 border rounded-lg my-2 md:w-96" type="text" id="mail_object" name="mail_object"><br>
+                    <p class="text-sm" id="email-obj-err"></p>
 
                     <p>Message :</p>
-                    <textarea class="w-80 border rounded-lg my-2 md:w-96" id="story" name="story" rows="10">
-                    </textarea><br>
-
-                    <button type="submit" class=" bg-gray-100 text-lg rounded-full py-3 px-14 text-white" style="background-color:#261579;">Envoyer</button>
+                    <textarea class="w-80 border rounded-lg my-2 md:w-96" id="message" name="message" rows="10" value=""></textarea><br>
+                    <br>
+                    <button type="submit" value="submit" id="submit" class="bg-gray-100 text-lg rounded-full py-3 px-14 text-white" style="background-color:#261579;">Envoyer</button>
                 </form>
             </div>
-
+            <!-- <script>
+                $("#contact-form").validate();
+            </script> -->
         </section>
 
     </div>
     <!-- JS & JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/script-jquery.js"></script>
+    <script src="js/front-jquery.js"></script>
+    <script src="js/form-jquery.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,5 @@ $(document).ready(function() {
         $(this).prev().slideToggle('slow');
     });
 
-    // $('.exp-box').hover(function() {
-    //     $(this).children().last().toggleClass('animate-bounce');
-    // })
+
 })
